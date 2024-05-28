@@ -1,12 +1,12 @@
 const winPattern = [
-    [0,1,2],
-    [3,4,5],
-    [6,7,8],
-    [0,3,6],
-    [0,4,8],
-    [1,4,7],
-    [2,5,8],
-    [2,4,6]
+    [0,1,2], // 1st row
+    [3,4,5], // 2nd row
+    [6,7,8], // 3rd row
+    [0,3,6], // 1st col
+    [0,4,8], // diagnol
+    [1,4,7], // 2nd col
+    [2,5,8], // 3rd col
+    [2,4,6]  // diagnol
 ];
 
 let turn = true;
@@ -35,7 +35,7 @@ box.forEach((ebox) =>
             ebox.innerHTML = "X";
             turn = true;
         }
-        
+
         userturn.innerHTML = `Move : ${(turn) ? `"O"` : `"X"`}`;
         count++;
         ebox.disabled = true;
@@ -100,4 +100,3 @@ reset.addEventListener("click", () =>
     res.innerHTML = "";
 });
 
-      
